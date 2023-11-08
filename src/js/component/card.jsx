@@ -1,17 +1,19 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 
-const Card = () => {
+
+function Card (props) {
     return (
-        <div className="card " style={{ width: '18rem' }}>
-        <img src={rigoImage} />
+        <div className="card mx-5" >
+        <img src={props.imageSrc} className="card-img-top" alt={props.imageAlt} />
         <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+          <h4 className="card-title text-center">{props.title}</h4>
+          <p className="card-text">{props.text}</p>
+          <div className="buttonLayout text-center">
+          <a href={props.buttonLink} className="btn btn-primary ">{props.buttonText}</a>
+          </div>
         </div>
-        </div>
-        )
+      </div>
+     );
 }  
 
 export { Card };

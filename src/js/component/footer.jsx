@@ -1,10 +1,10 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props) => {
     return (
-<div className="container">
+<div className="footer">
   <footer className="bg-dark">
-    <p className="text-center text-muted">Copright © Your Website 2023</p>
+    <p className="text-center text-muted pt-4">Copright © Your Website {props.website} 2023</p>
   </footer>
 </div>
 )
